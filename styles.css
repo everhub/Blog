@@ -1,0 +1,39 @@
+body {
+    background-color:lightblue;
+}
+
+.containercreateaccount {
+    padding: 12px;
+    align-content: center;
+}
+
+input[type = text], input[type = password] {
+    width: 100%;
+    padding: 12px;
+    display: inline-block;
+    border: none;
+    background-color: #f1f1f1;
+    text-align: left;
+}
+
+.registerbutton {
+    background-color: lightgreen;
+    width: 20%;
+    height: 50px;
+    margin: 3px -1;
+    color: black;
+    cursor: pointer;
+    opacity: 0.9;
+    align-content: center;
+    text-align: center;
+}
+
+input[type = number], input[type = age] {
+    background-color: #f1f1f1;
+    padding: 4px;
+    border: none;
+}
+
+.registerbutton :hover {
+    opacity: 1;
+}
