@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Registration</title>
+    <link rel = "stylesheet" href = "styles.css">
+    <script src = "script.js"></script>
+</head>
+<body>
+    <form action = "action_page.php">
+    <div class = "containercreateaccount">
+        <h1>Register</h1>
+        <p>Fill out this information to create an account.</p>
+        <hr>
+
+        <label for = "email"><b>Email</b></label>
+        <input type = "text" placeholder = "Enter email" name = "email" id = "email" required>
+
+        <label for = "password"><b>Password</b></label>
+        <input type = "password" placeholder = "Enter password" name = "password" id = "password" pattern = "(?=.*\d)(?=.*[A-Z]).{8,20}" title = "Must contain atleast one uppercase, one special character, and between 8-20" required>
+        <input type = "checkbox" onclick = "myFunction()">Show Password
+
+        <div id = "message">
+            <h3>Password must contain the following:</h3>
+            <p id = "letter" class = "invalid">A <b>uppercase</b> letter</p>
+            <p id = "character" class = "invalid"> A <b>special</b> character</p>
+            <p id = "minlength" class = "invalid">Minimum <b>8 characters</b></p>
+            <p id = "maxlength" class =  "invalid">Maximum <b>20 characters</b></p>
+        </div>
+
+        <label for = "passwordconfirm"><b>Confirm Password</b></label>
+        <input type = "password" placeholder = "Repeat password" name = "passwordconfirm" id = "passwordconfirm" required>
+
+        <label for = "username"><b>Username</b></label>
+        <input type = "text" placeholder = "Enter username" name = "username" id = "username" required>
+        <p>*Username must be less than 20 characters</p>
+
+        <label for = "age"><b>Age</b></label>
+        <input type = "number" placeholder = "Enter age" name = "age" id = "age">
+        <hr> 
+
+        <button type = "submit" onclick = saveData() class = "registerbutton">Register</button>
+    </div>
+
+    <div class = "containerlogin">
+        <p>Already have an account? <a href = "#">Sign in</a></p>
+    </div>
+    </form>
+</body>
+</html>
